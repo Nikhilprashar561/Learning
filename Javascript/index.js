@@ -1,11 +1,6 @@
 // Here We are Practice some amount of good interview question prepare for interview .
 
 // 1. Clousre in javascript parent function inside we call child function and use some value of parent function 👇
-
-// "use strict"
-
-a = 12
-
 const abc = () => {
   var x = 28;
   console.log(`Hello`);
