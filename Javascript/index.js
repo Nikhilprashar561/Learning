@@ -1,4 +1,4 @@
-// Here We are Practice some amount of good interview question prepare for interview .
+// Here We are Practice some amount of good interview question prepare for interview .watching videos form youtube
 
 // 1. Clousre in javascript parent function inside we call child function and use some value of parent function 👇
 const abc = () => {
@@ -20,3 +20,65 @@ const ans = abc();
 const data = ans();
 const val = data();
 const arr = val();
+
+// Deep Copy and Deep Shallow copy in javaScript 👇
+
+const am = {
+    name:"Nikhil",
+    class:"BSC IT 5th"
+}
+const obj = {...am}
+obj.class= "bsc"
+console.log(am)
+console.log(obj)
+
+const obj = {
+  name: "Nikhil",
+  email: "nikhilprashar561gmial.com",
+  password: "3215",
+  social: {
+    insta: {
+      public: {
+        username: "nikhilprahar",
+        password: 123,
+      },
+      private: {
+        username: "prasharnikhill",
+        password: 321,
+        screenLock: {
+          homelock: "number",
+          lockscreen: "pattern",
+        },
+      },
+    },
+    youtube: {
+      username: "nikhilji",
+      password: 15951,
+    },
+  },
+  offical: true,
+};
+
+// const json = JSON.parse(JSON.stringify(obj))
+// json.social.insta.public.password = "Anchal Priya"
+// console.log(obj.social.insta.public.password)
+// console.log(json.social.insta.public.password)
+// console.log(typeof obj);
+function makeDeepCopy(ob) {
+  if (typeof ob !== "object" || ob === null) {
+    return ob;
+  }
+  var codyVal = Array.isArray(ob) ? [] : {}
+//   console.log(`yeh hai copyval ${codyVal}`)
+  var keys = Object.keys(ob)
+//   console.log(`yeh hai keys ${keys}`)
+  for(var i=0;i < keys.length; i++){
+    codyVal[keys[i]] = makeDeepCopy(ob[keys[i]])
+  }
+  return codyVal
+}
+var copy = makeDeepCopy(obj);
+// console.log(copy.name)
+copy.name = "Komal"
+console.log(obj.name)
+console.log(copy)

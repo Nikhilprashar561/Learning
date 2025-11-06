@@ -202,7 +202,7 @@ function start<N>(any: N, Area: String = "Ptk", Distance: number = 40 ){
 start("Nikhil")
 start(45, "Raja", 85)
 
-Till know complete the tutorial of the Typescript Domination
+// Till know complete the tutorial of the Typescript Domination
 
 function checkEvenOrOdd(num: number): string {
   if (num % 2 === 0) {
