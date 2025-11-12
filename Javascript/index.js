@@ -23,14 +23,14 @@ const arr = val();
 
 // Deep Copy and Deep Shallow copy in javaScript 👇
 
-// const am = {
-//     name:"Nikhil",
-//     class:"BSC IT 5th"
-// }
-// const obj = {...am}
-// obj.class= "bsc"
-// console.log(am)
-// console.log(obj)
+const am = {
+    name:"Nikhil",
+    class:"BSC IT 5th"
+}
+const obj = {...am}
+obj.class= "bsc"
+console.log(am)
+console.log(obj)
 
 const obj = {
   name: "Nikhil",
@@ -59,11 +59,12 @@ const obj = {
   offical: true,
 };
 
-// const json = JSON.parse(JSON.stringify(obj))
-// json.social.insta.public.password = "Anchal Priya"
-// console.log(obj.social.insta.public.password)
-// console.log(json.social.insta.public.password)
-// console.log(typeof obj);
+const json = JSON.parse(JSON.stringify(obj))
+json.social.insta.public.password = "Anchal Priya"
+console.log(obj.social.insta.public.password)
+console.log(json.social.insta.public.password)
+console.log(typeof obj);
+
 function makeDeepCopy(ob) {
   if (typeof ob !== "object" || ob === null) {
     return ob;
@@ -96,3 +97,23 @@ function Person(fullname, className, roll_no,location){
 }
 const Nikhil = new Person("Nikhil", "BSC IT", 253805, "Pathankot")
 console.log(Nikhil.getName())
+
+// After ES Best Way to writing a object in JavaScript using Class of constructor 👇
+
+class Employee {
+  constructor(fullname, position, location, mobile){
+    this.fullname = fullname,
+    this.position = position,
+    this.location = location,
+    this.mobile = mobile
+  }
+  getFullname(){
+    console.log(this.fullname)
+  }
+  getPostion(){
+    console.log(this.position)
+  }
+}
+const dev = new Employee("Kaka", "AWS", "PTK", 5215)
+console.log(dev)
+log(dev.getPostion())
