@@ -23,14 +23,14 @@ const arr = val();
 
 // Deep Copy and Deep Shallow copy in javaScript 👇
 
-const am = {
-    name:"Nikhil",
-    class:"BSC IT 5th"
-}
-const obj = {...am}
-obj.class= "bsc"
-console.log(am)
-console.log(obj)
+// const am = {
+//     name:"Nikhil",
+//     class:"BSC IT 5th"
+// }
+// const obj = {...am}
+// obj.class= "bsc"
+// console.log(am)
+// console.log(obj)
 
 const obj = {
   name: "Nikhil",
@@ -82,3 +82,17 @@ var copy = makeDeepCopy(obj);
 copy.name = "Komal"
 console.log(obj.name)
 console.log(copy)
+
+// Before ES6 Best way to writing a Object in JavaScript Using a Function Constructor 👇
+
+function Person(fullname, className, roll_no,location){
+  this.fullname = fullname,
+  this.className = className,
+  this.roll_no = roll_no,
+  this.location = location
+  this.getName = function (){
+    console.log(this.className)
+  }
+}
+const Nikhil = new Person("Nikhil", "BSC IT", 253805, "Pathankot")
+console.log(Nikhil.getName())

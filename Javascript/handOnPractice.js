@@ -6,6 +6,8 @@ function log(val) {
   console.log(val);
 }
 
+// // 1. Predict the output questions 👇
+
 // myFunc();
 
 // var myFunc = function () {
@@ -78,3 +80,5 @@ const obj = {
 log(obj.height)
 delete obj.height;
 console.log(obj.height)
+
+
