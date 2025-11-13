@@ -111,3 +111,32 @@ const x3 = {
 
 console.log(x3.p1)
 // console.log(x1.p3)
+
+// Proxy in javaScript
+
+const obj = {
+  fname: "Nikhil",
+  age: 20,
+};
+
+const objProxy = new Proxy(obj, {
+  get(target, prop) {
+    if (prop in target) return target[prop];
+    return false;
+  },
+  set(target, prop, value) {
+    if (!(prop in target)) throw new Error(`${prop} does not exists`);
+    switch (prop) {
+      case "fname":
+        if (typeof value !== "string") throw new Error(`${prop} must be string`);
+        break;
+      case "age":
+        if (typeof value !== "number") throw new Error(`${prop} must be number`);
+        if (value <= 0) throw new Error(`${prop} must be > zero`);
+    }
+    target[prop] = value;
+  },
+});
+
+objProxy.fname = 55
+console.log(obj)
