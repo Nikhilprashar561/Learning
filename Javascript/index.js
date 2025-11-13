@@ -117,3 +117,22 @@ class Employee {
 const dev = new Employee("Kaka", "AWS", "PTK", 5215)
 console.log(dev)
 log(dev.getPostion())
+
+// Use Exsisting class to add new data in new class 👇
+
+class Employee {
+    constructor(name, id){
+        this.name = name,
+        this.id = id
+    }
+}
+class newEmployee extends Employee{
+    constructor(name, id, day){
+        super(name,id),
+        this.day = day
+    }
+}
+const user = new Employee("Nikhil", 41)
+const user2 = new newEmployee("Nikhil", 65, "Monday")
+console.log(user)
+console.log(user2)

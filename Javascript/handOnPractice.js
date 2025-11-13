@@ -80,3 +80,34 @@ const obj = {
 log(obj.height)
 delete obj.height;
 console.log(obj.height)
+
+// Learn Prototype in JavaScript 👇
+
+const obj = {
+    name:"Nikhil",
+    id:38,
+    getName(){
+        return `Yeh hai name user ka ${this.name}`
+    }
+}
+const obj2 = Object.create(obj)
+
+console.log("Yeh hai data object 1", obj)
+console.log("yeh hai data object 2", obj2)
+obj2.__proto__.name = "Rajaa Chor"
+console.log(obj.name)
+
+const x1 = {
+    p1:"Hello Guys",
+}
+const x2 = {
+    p2:"Hello Boys",
+    __proto__: x1
+}
+const x3 = {
+    p3:"Hello Gurls",
+    __proto__: x2
+}
+
+console.log(x3.p1)
+// console.log(x1.p3)
