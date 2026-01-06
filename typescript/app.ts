@@ -215,3 +215,4 @@ function checkEvenOrOdd(num: number): string {
 // Test the function
 console.log(checkEvenOrOdd(4)); // Output: Even
 console.log(checkEvenOrOdd(7)); // Output: Odd
+
