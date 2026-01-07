@@ -49,3 +49,21 @@ function validateChai(chai: MasalaChai | kulladChai){
   }
 }
 
+type chaiSutta = {
+  type : String
+  Sutta: number
+}
+
+type ElachiChai = {type: "Elachi"; ingrediant: number}
+type MassalaChai = {type: "Masala"; ingrediant: number}
+type AdarkChai = {type: "Adarak"; ingrediant: number}
+
+type chaiLevel = ElachiChai | MassalaChai | AdarkChai
+
+function checkChai(chai : chaiLevel){
+  switch(chai.type){
+    case "Elachi":
+      return `Elachi`
+      break;
+  }
+}
