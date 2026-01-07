@@ -1,18 +1,51 @@
-// Variable with type
-let username: string = "Nikhil";
-let age: number = 21;
-let isDeveloper: boolean = true;
+let subs: number | string = "Hello"; // That is Union Where We are Excepting more than two values from one variable
 
-// Function with types
-function greet(name: string): string {
-  return `Hello, ${name}!`;
+let airlineSeat: "Window" | "Middle" | "Aside" = "Window"; // Union you can also define custom data type
+
+let a: any = 45 + "55"; // Mean With any data type you can store any type of data whatever it is number, string, boolean.
+console.log(a);
+
+let b: unknown;
+
+// Type Narrowing in TS
+
+function getChai(kind: String | number) {
+  if (typeof kind === "string") {
+    return `Making ${kind} this is Awesome.`;
+  }
+  return `Making number of ${kind} this way`;
 }
 
-// Using the function
-console.log(greet(username));
-console.log("Age:", age);
-console.log("Developer:", isDeveloper);
+function ServiceChai(msg?: String) {
+  if (msg) {
+    return `This is ${msg}`;
+  }
+  return `Message was not Recevied`;
+}
 
-console.log("Abe Chal Nah")
+function myChai(size: "small" | "medium" | "full") {
+  if (size === "small") {
+    return `This is ${size} chai`;
+  }
+  if (size === "medium" || size === "full") {
+    return `This is ${size} chai`;
+  }
+  return `This is ${size} chai`;
+}
 
-console.log("Are Bhai Shab")
+class kulladChai{
+  serve(){
+    return `Serve Khullad Chai`
+  }
+}
+class MasalaChai{
+  serve(){
+    return `Serve Masala Chai`
+  }
+}
+function validateChai(chai: MasalaChai | kulladChai){
+  if(chai instanceof kulladChai){
+    return chai.serve()
+  }
+}
+
