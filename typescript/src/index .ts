@@ -250,3 +250,44 @@ enum HttpCode {
 }
 
 let code: HttpCode = HttpCode.BadRequest;
+
+// Class in TS 👇
+
+class chai{
+    name:String
+    email:String
+    constructor (name:String, email:String){
+        this.name = name,
+        this.email = email
+    }
+}
+
+const user = new chai("Name", "Email")
+user.name = "Nikhil"
+console.log(user.name)
+
+class getSte {
+    private _sugar = 25
+
+    get sugar(){
+        return this._sugar
+    }
+    set sugar(value:number){
+        this._sugar = value
+    }
+}
+
+const gs = new getSte()
+gs.sugar = 25
+console.log(gs.sugar)
+
+class Heater {
+    Heat(){}
+}
+
+class newHeat {
+    constructor(private heat : Heater){}
+    make(){
+        this.heat.Heat
+    }
+}
