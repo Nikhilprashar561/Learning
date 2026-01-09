@@ -211,3 +211,42 @@ greet("Prashat", 95)
 function hi():number {
     return 25
 }
+
+// Array in TS 👇
+
+const arr: string[] = ["Hello", "Bahi"]
+const arr1: Array<number> = [52, 55]
+const arr2 : readonly [ string ] = ["Hello"]
+
+// Tuples in TS 👇
+
+let user: [number, string, boolean] = [1, "Nikhil", true];
+
+console.log(user[0]); // 1
+console.log(user[1]); // Nikhil
+console.log(user[2]); // true
+
+let employee: [number, string, string?];
+
+employee = [101, "Rahul"];
+employee = [102, "Amit", "Developer"];
+
+let point: readonly [number, number] = [10, 20];
+
+// Enum in TS 👇
+
+enum Status {
+  Success,
+  Failure,
+  Pending
+}
+
+const checkStatus = Status.Success
+
+enum HttpCode {
+  OK = 200,
+  BadRequest = 400,
+  Unauthorized = 401
+}
+
+let code: HttpCode = HttpCode.BadRequest;
