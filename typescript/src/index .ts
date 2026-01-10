@@ -171,7 +171,7 @@ teaGet("Hot")
 type items = {name: String, class: String}
 type adress = {state: String , country: String, pincode: number}
 
-type user = {
+type userH = {
     id: String,
     item: items[],
     location : adress[]
@@ -262,9 +262,9 @@ class chai{
     }
 }
 
-const user = new chai("Name", "Email")
-user.name = "Nikhil"
-console.log(user.name)
+const userr = new chai("Name", "Email")
+userr.name = "Nikhil"
+console.log(userr.name)
 
 class getSte {
     private _sugar = 25
