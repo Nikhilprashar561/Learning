@@ -3,3 +3,10 @@
 // let name = 5366
 
 // console.log(name.__proto__)
+
+
+let weight = 1
+
+if(weight >0 && weight <= 1){
+    console.log(`Chal Pada Guys`, weight)
+}
